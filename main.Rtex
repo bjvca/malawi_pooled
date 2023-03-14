@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Results for pooled data}
+\author{bjorn.vancampenhout }
+\date{March 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+<<>>=
+# Create a sequence of numbers
+X = 2:10
+
+# Display basic statistical measures
+summary(X)
+
+@
+
+\end{document}
