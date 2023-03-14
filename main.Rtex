@@ -12,12 +12,48 @@
 \section{Introduction}
 
 <<>>=
-# Create a sequence of numbers
-X = 2:10
-
-# Display basic statistical measures
-summary(X)
+load("res_tab.Rdata")
 
 @
+\begin{table}
+\caption{Average treatment effects on knowledge\label{tab:knowledge}}
+
+
+\begin{center}
+\begin{tabular}{rcccc}
+\hline\hline
+
+& (1) & (2) & (3) & (4)\\
+
+\cline{2-5}
+
+T1 R1 & \Sexpr{format(round(res_tab[1,1,1],digits=3),nsmall=3)}$^{\Sexpr{ifelse(res_tab[1,3,1]<.01,"**",ifelse(res_tab[1,3,1]<.05,"*",ifelse(res_tab[1,3,1]<.1,"+","")))}}$ \\
+
+& (\Sexpr{format(round(res_tab[1,2,1],digits=3),nsmall=3)}) \\
+
+T2 R1 & \Sexpr{format(round(res_tab[2,1,1],digits=3),nsmall=3)}$^{\Sexpr{ifelse(res_tab[2,3,1]<.01,"**",ifelse(res_tab[2,3,1]<.05,"*",ifelse(res_tab[2,3,1]<.1,"+","")))}}$\\
+
+& (\Sexpr{format(round(res_tab[2,2,1],digits=3),nsmall=3)}) \\
+
+T1 R2 & \Sexpr{format(round(res_tab[3,1,1],digits=3),nsmall=3)}$^{\Sexpr{ifelse(res_tab[3,3,1]<.01,"**",ifelse(res_tab[3,3,1]<.05,"*",ifelse(res_tab[3,3,1]<.1,"+","")))}}$\\
+
+& (\Sexpr{format(round(res_tab[3,2,1],digits=3),nsmall=3)}) \\
+
+T2 R2 & \Sexpr{format(round(res_tab[4,1,1],digits=3),nsmall=3)}$^{\Sexpr{ifelse(res_tab[4,3,1]<.01,"**",ifelse(res_tab[4,3,1]<.05,"*",ifelse(res_tab[4,3,1]<.1,"+","")))}}$\\
+
+& (\Sexpr{format(round(res_tab[4,2,1],digits=3),nsmall=3)}) \\
+
+
+
+
+
+
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\scriptsize
 
 \end{document}
