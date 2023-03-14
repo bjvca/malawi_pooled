@@ -43,6 +43,26 @@ T2 R2 & \Sexpr{format(round(res_tab[4,1,1],digits=3),nsmall=3)}$^{\Sexpr{ifelse(
 
 & (\Sexpr{format(round(res_tab[4,2,1],digits=3),nsmall=3)}) \\
 
+R2 & \Sexpr{format(round(res_tab[5,1,1],digits=3),nsmall=3)}$^{\Sexpr{ifelse(res_tab[5,3,1]<.01,"**",ifelse(res_tab[5,3,1]<.05,"*",ifelse(res_tab[5,3,1]<.1,"+","")))}}$\\
+
+& (\Sexpr{format(round(res_tab[5,2,1],digits=3),nsmall=3)}) \\
+
+\cline{2-5}
+T1 R1  = T1 R2 & \Sexpr{format(round(res_tab[6,3,1],digits=3))} \\
+
+
+T2 R1  = T2 R2 & \Sexpr{format(round(res_tab[7,3,1],digits=3))} \\
+
+T1 R1  = T2 R1 &  \Sexpr{format(round(res_tab[8,3,1],digits=3))} \\
+
+T1 R2  = T2 R2 &  \Sexpr{format(round(res_tab[9,3,1],digits=3))} \\
+\cline{2-5}
+
+Observations & \Sexpr{format(round(res_tab[10,1,1],digits=3))} \\ 
+R-squared (Adj) & \Sexpr{format(round(res_tab[11,1,1],digits=3))} \\ 
+R-squared (Within) & \Sexpr{format(round(res_tab[12,1,1],digits=3))} \\ 
+Mean in Ctrl & \Sexpr{format(round(res_tab[13,1,1],digits=3))} \\ 
+
 
 
 
